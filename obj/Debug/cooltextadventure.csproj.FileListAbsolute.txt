@@ -1,0 +1,6 @@
+C:\Users\mbaar\OneDrive\Documenten\Schooljaar2017-2018\Periode04\cooltextadventure\cooltextadventure\cooltextadventure\obj\Debug\cooltextadventure.csprojResolveAssemblyReference.cache
+C:\Users\mbaar\OneDrive\Documenten\Schooljaar2017-2018\Periode04\cooltextadventure\cooltextadventure\cooltextadventure\bin\Debug\cooltextadventure.exe.config
+C:\Users\mbaar\OneDrive\Documenten\Schooljaar2017-2018\Periode04\cooltextadventure\cooltextadventure\cooltextadventure\bin\Debug\cooltextadventure.exe
+C:\Users\mbaar\OneDrive\Documenten\Schooljaar2017-2018\Periode04\cooltextadventure\cooltextadventure\cooltextadventure\bin\Debug\cooltextadventure.pdb
+C:\Users\mbaar\OneDrive\Documenten\Schooljaar2017-2018\Periode04\cooltextadventure\cooltextadventure\cooltextadventure\obj\Debug\cooltextadventure.exe
+C:\Users\mbaar\OneDrive\Documenten\Schooljaar2017-2018\Periode04\cooltextadventure\cooltextadventure\cooltextadventure\obj\Debug\cooltextadventure.pdb
