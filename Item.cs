@@ -2,20 +2,30 @@
 
 namespace ZuulCS
 {
-	class Item
-	{
-        private String itemName;
-        private String description;
+    public class Item
+    {
+        private string description;
 
-        public Item(String name, String description)
+        public Item()
         {
-            this.itemName = name;
-            this.description = description;
+            description = "A generic Item";
+            System.Console.WriteLine("Item Constructor");
         }
 
-        public String getName()
+        public virtual void use(Object o)
         {
-            return this.itemName;
+            System.Console.WriteLine("Item::use(Object o)");
+        }
+
+        public virtual void use()
+        {
+            System.Console.WriteLine("Item::use()");
+        }
+
+        public string Description
+        {
+            get { return this.description; }
+            set { this.description = value; }
         }
     }
 }

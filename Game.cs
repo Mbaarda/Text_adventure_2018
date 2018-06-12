@@ -7,10 +7,10 @@ namespace ZuulCS
 		private Parser parser;
         private Player player;
         private Item knife;
-        private Item key;
 
 		public Game ()
 		{
+            Key key = new Key();
             player = new Player();
 			createRooms();
 			parser = new Parser();
@@ -140,12 +140,12 @@ namespace ZuulCS
 			return wantToQuit;
 		}
 
-        private void createItems()
+       /* private void createItems()
         {
             key = new Item("Key", "Misterious rusty key");
             knife = new Item("Knife", "An old kitchen knife");
         }
-
+        */
 		// implementations of user commands:
 
 		/**

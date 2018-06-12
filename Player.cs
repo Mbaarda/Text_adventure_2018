@@ -10,8 +10,7 @@ namespace ZuulCS
 
         private Room currentRoom;
         private int playerHealth = 100;
-        private Inventory inventory;
-
+                        
     public Player()
     {
       //  inventory = new Inventory();
@@ -97,10 +96,5 @@ namespace ZuulCS
                 this.playerHealth = 0;
             }
         }
-
-        public Inventory getInventory()
-         {
-             return this.inventory;
-         }
     }
 }

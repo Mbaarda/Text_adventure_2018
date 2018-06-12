@@ -7,41 +7,26 @@ namespace ZuulCS
 {
 	 public class Inventory
 	 {
-
-        private List <Item> itemList;
+        private Item key;
 
         public Inventory()
         {
+            Dictionary<string, Item> items = new Dictionary<string, Item>();
 
-            itemList = new List<Item>();
+            items["key"] = key;
 
-        }
-/*
-        public void addItem(Item item)
-        {
-            this.itemList.add(item);
-        }
-
-        public String getItemsDescription()
-        {
-            String str = "";
-            for (Item item : itemList)
+            Console.WriteLine("=========================");
+            Console.WriteLine("The Dictionary contains: ");
+            foreach (KeyValuePair<string, Item> entry in items)
             {
-                str += item.getName() + ", ";
-            }
-             return str;
+                Console.WriteLine(entry.Key + ": " + entry.Value.Description);
             }
 
-        public Item remove(Item item)
-        {
-            Item removedItem = null;
-                if (itemList.contains(item))
-                {
-                    removedItem = item;
-                    itemList.remove(item);
-                }
-            return removedItem;
-         }*/
+
+
+
+
+        }
      }
 }
 
