@@ -7,13 +7,14 @@ namespace ZuulCS
 {
 	 public class Inventory
 	 {
-        private Item key;
+
+        private Dictionary<string, Item> items;
 
         public Inventory()
         {
-            Dictionary<string, Item> items = new Dictionary<string, Item>();
+            items = new Dictionary<string, Item>();
 
-            items["key"] = key;
+            
 
             Console.WriteLine("=========================");
             Console.WriteLine("The Dictionary contains: ");
@@ -24,6 +25,13 @@ namespace ZuulCS
 
 
 
+
+
+        }
+
+        public void addItem(Item item)
+        {
+            items.add(item.name, item);
 
 
         }

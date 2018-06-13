@@ -6,11 +6,12 @@ namespace ZuulCS
 	{
 		private Parser parser;
         private Player player;
-        private Item knife;
+       // private Item knife;
 
 		public Game ()
 		{
             Key key = new Key();
+            key.Description = "A rusty old key.";
             player = new Player();
 			createRooms();
 			parser = new Parser();
@@ -60,6 +61,7 @@ namespace ZuulCS
             corridor.setExit("down", staircase);
 
             player.setCurrentRoom(basement);  // start game outside
+           // key.setCurrentRoom(basement);
 
             //staircase.ge
                                       

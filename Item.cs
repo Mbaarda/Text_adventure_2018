@@ -5,9 +5,11 @@ namespace ZuulCS
     public class Item
     {
         private string description;
+        private string name;
 
         public Item()
         {
+
             description = "A generic Item";
             System.Console.WriteLine("Item Constructor");
         }
@@ -26,6 +28,11 @@ namespace ZuulCS
         {
             get { return this.description; }
             set { this.description = value; }
+        }
+        public string Name
+        {
+            get { return this.name; }
+            set { this.name = value; }
         }
     }
 }
