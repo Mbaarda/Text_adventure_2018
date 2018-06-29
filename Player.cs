@@ -17,6 +17,8 @@ namespace ZuulCS
       //  inventory = new Inventory();
     }
 
+     
+
         public void goRoom(Command command)
         {
             if (!command.hasSecondWord())
@@ -43,11 +45,13 @@ namespace ZuulCS
                 foreach (string key in currentRoom.Inventory.Items.Keys)
                 {
 
-                    Console.WriteLine(currentRoom.Inventory.Items[key].Name);
+                    
+                    Console.WriteLine("Items: " +(currentRoom.Inventory.Items[key].Name));
+                   // Console.WriteLine(currentRoom.Inventory.Items[key].Name);
 
 
                 }
-                damage(20);
+                damage(10);
             
             }
         }

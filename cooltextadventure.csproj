@@ -45,6 +45,7 @@
     <Compile Include="Command.cs" />
     <Compile Include="CommandLibrary.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="Bandage.cs" />
     <Compile Include="Key.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Player.cs" />

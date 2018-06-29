@@ -44,6 +44,7 @@ namespace ZuulCS
 
             kitchen.setExit("north", livingroom);
             kitchen.setExit("west", staircase);
+            kitchen.Inventory.addItem(new Bandage());
 
             bathroom.setExit("west", corridor);
             bathroom.Inventory.addItem(new Key());
