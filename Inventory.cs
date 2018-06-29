@@ -10,6 +10,8 @@ namespace ZuulCS
 
         private Dictionary<string, Item> items;
 
+        internal Dictionary<string, Item> Items { get => items; }
+
         public Inventory()
         {
             items = new Dictionary<string, Item>();
@@ -23,19 +25,19 @@ namespace ZuulCS
                 Console.WriteLine(entry.Key + ": " + entry.Value.Description);
             }
 
-
-
-
-
         }
-
+        
         public void addItem(Item item)
         {
-            items.add(item.name, item);
-
-
+            items.Add(item.Name, item);   
         }
-     }
+
+        public void takeItem(Item item)
+        {
+            items.Add(item.Name, item);
+        }
+
+    }
 }
 
 

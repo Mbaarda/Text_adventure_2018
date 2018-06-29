@@ -8,6 +8,7 @@ namespace ZuulCS
 {
    public class Player { 
 
+        //private pInventory;
         private Room currentRoom;
         private int playerHealth = 100;
                         
@@ -39,6 +40,13 @@ namespace ZuulCS
 
                 this.setCurrentRoom(nextRoom);
                 Console.WriteLine(this.getCurrentRoom().getLongDescription());
+                foreach (string key in currentRoom.Inventory.Items.Keys)
+                {
+
+                    Console.WriteLine(currentRoom.Inventory.Items[key].Name);
+
+
+                }
                 damage(20);
             
             }

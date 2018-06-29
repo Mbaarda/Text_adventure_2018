@@ -4,14 +4,15 @@ namespace ZuulCS
 {
     public class Item
     {
-        private string description;
-        private string name;
+        protected string description;
+        protected string name;
 
         public Item()
         {
 
+            name = "item";
             description = "A generic Item";
-            System.Console.WriteLine("Item Constructor");
+           // System.Console.WriteLine("Item Constructor");
         }
 
         public virtual void use(Object o)

@@ -6,12 +6,10 @@ namespace ZuulCS
 	{
 		private Parser parser;
         private Player player;
-       // private Item knife;
+       
 
 		public Game ()
 		{
-            Key key = new Key();
-            key.Description = "A rusty old key.";
             player = new Player();
 			createRooms();
 			parser = new Parser();
@@ -48,6 +46,7 @@ namespace ZuulCS
             kitchen.setExit("west", staircase);
 
             bathroom.setExit("west", corridor);
+            bathroom.Inventory.addItem(new Key());
 
             winecellar.setExit("up", staircase);
             winecellar.setExit("north", basement);
@@ -60,14 +59,9 @@ namespace ZuulCS
             corridor.setExit("east", bathroom);
             corridor.setExit("down", staircase);
 
-            player.setCurrentRoom(basement);  // start game outside
-           // key.setCurrentRoom(basement);
-
-            //staircase.ge
+            player.setCurrentRoom(basement);
                                       
         }
-
-
 		/**
 	     *  Main play routine.  Loops until end of play.
 	     */
