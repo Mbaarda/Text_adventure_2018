@@ -17,7 +17,8 @@ namespace ZuulCS
 				"quit",
 				"help",
                 "look",
-                "heal"
+                "take",
+                "use"
 			};
 		}
 

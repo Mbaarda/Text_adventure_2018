@@ -17,7 +17,7 @@ namespace ZuulCS
 
 		private void createRooms()
 		{
-            Room staircase, basement, livingroom, bathroom, winecellar, corridor, kitchen, backyard, shed;
+            Room staircase, basement, livingroom, bathroom, winecellar, corridor, kitchen, backyard, shed, secondCorridor, addict, secondAddict;
 
             // create the rooms
             staircase = new Room("in a hallway with a giant staircase.");
@@ -29,6 +29,10 @@ namespace ZuulCS
             corridor = new Room("in a corridor, its a long and small hallway.");
             backyard = new Room("in the backyard, it't totally overgrown.");
             shed = new Room("in a shed in the backyard, its full of shit. It's a miracle its still standing.");
+            secondCorridor = new Room("on the other side of the long hallway");
+            addict = new Room("in huge dark addict, you can see something moving on the other side of the room");
+            secondAddict = new Room("on the otherside of the addict, some rats ran away when the owl flew right over your head");
+            
 
             // initialise room exits
 
@@ -46,8 +50,7 @@ namespace ZuulCS
             kitchen.setExit("west", staircase);
             kitchen.Inventory.addItem(new Bandage());
 
-            bathroom.setExit("west", corridor);
-            bathroom.Inventory.addItem(new Key());
+            bathroom.setExit("east", corridor);
 
             winecellar.setExit("up", staircase);
             winecellar.setExit("north", basement);
@@ -57,8 +60,18 @@ namespace ZuulCS
             staircase.setExit("up", corridor);
 
             
-            corridor.setExit("east", bathroom);
+            corridor.setExit("west", bathroom);
             corridor.setExit("down", staircase);
+            corridor.setExit("east", secondCorridor);
+
+            secondCorridor.setExit("east", corridor);
+            secondCorridor.setExit("up", addict);
+
+            addict.setExit("down", secondCorridor);
+            addict.setExit("west", secondAddict);
+
+            secondAddict.setExit("east", addict);
+            secondAddict.Inventory.addItem(new Key());
 
             player.setCurrentRoom(basement);
                                       
@@ -132,17 +145,20 @@ namespace ZuulCS
 				case "quit":
 					wantToQuit = true;
 					break;
+                case "take":
+                    takeItem(command);
+                    break;
 			}
 
 			return wantToQuit;
 		}
 
-       /* private void createItems()
+        private void takeItem(Command command)
         {
-            key = new Item("Key", "Misterious rusty key");
-            knife = new Item("Knife", "An old kitchen knife");
+            
         }
-        */
+
+   
 		// implementations of user commands:
 
 		/**

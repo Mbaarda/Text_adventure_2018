@@ -8,16 +8,16 @@ namespace ZuulCS
 {
    public class Player { 
 
-        //private pInventory;
+        private Inventory playerInventory;
         private Room currentRoom;
         private int playerHealth = 100;
                         
     public Player()
     {
-      //  inventory = new Inventory();
+        playerInventory = new Inventory();
     }
 
-     
+       
 
         public void goRoom(Command command)
         {
@@ -107,6 +107,11 @@ namespace ZuulCS
             {
                 this.playerHealth = 0;
             }
+        }
+
+        public Inventory Inventory
+        {
+            get { return playerInventory; }
         }
     }
 }

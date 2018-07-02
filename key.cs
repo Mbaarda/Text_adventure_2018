@@ -6,11 +6,9 @@ namespace ZuulCS {
     {
         public Key()
         {
-            System.Console.WriteLine("Key Constructor");
 
             name = "key";
             description = "A rusty old key";
-
             
         }
 
